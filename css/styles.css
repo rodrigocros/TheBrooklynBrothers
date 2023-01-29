@@ -42,6 +42,11 @@ header {
   height: 18vh;
   text-align: center;
 }
+@media (max-width: 425px) {
+  header {
+    height: 10vh;
+  }
+}
 header img {
   width: 195px;
   height: 79px;
@@ -60,7 +65,8 @@ header .search-icon {
 }
 @media (max-width: 425px) {
   header .search-icon {
-    font-size: 15px;
+    font-size: 20px;
+    color: #7B7070;
     top: 10px;
     left: 70px;
   }
@@ -77,29 +83,7 @@ header nav {
 }
 @media (max-width: 425px) {
   header nav {
-    position: fixed;
-    top: 5px;
-    left: -110%;
-    width: 35rem;
-    height: 80vh;
-    background-color: #389CD6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-  }
-  header nav.active {
-    left: 0;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
-  }
-}
-header nav p {
-  font-size: 20px;
-}
-@media (max-width: 425px) {
-  header nav p {
-    font-size: 15px;
+    display: none;
   }
 }
 header nav a {
@@ -111,7 +95,7 @@ header nav a:hover {
 }
 header .icon {
   right: 160px;
-  bottom: 500px;
+  bottom: 40px;
   position: relative;
   font-size: 2.5rem;
   margin-left: 2rem;
@@ -120,6 +104,33 @@ header .icon {
 }
 header .icon:hover {
   color: #389CD6;
+}
+@media (max-width: 425px) {
+  header .navbaar {
+    position: fixed;
+    top: 65px;
+    left: -110%;
+    width: 35rem;
+    height: 80vh;
+    background-color: #389CD6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navbaar.active {
+    left: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  }
+}
+header .navbaar p {
+  font-size: 20px;
+}
+@media (max-width: 425px) {
+  header .navbaar p {
+    font-size: 15px;
+  }
 }
 header #menu-btn {
   display: none;
@@ -508,11 +519,6 @@ header #menu-btn {
   border-radius: 16px;
   width: 250px;
   text-align: center;
-}
-@media (max-width: 425px) {
-  .thirdmain .see-more {
-    margin-top: 20px;
-  }
 }
 .thirdmain .see-more a {
   color: #FFFFFF;
