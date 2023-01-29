@@ -3,8 +3,7 @@
     
 @font-face 
     font-family: 'trebuc'
-    src: url('./fonts/trebuc') format('truetype')
-
+    src: url('/fonts/trebuc.ttf') format('truetype')
     font-weight: normal
     font-style: normal  
 
@@ -12,7 +11,7 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-    font-family: "trebuc", sans-serif
+    font-family: 'trebuc', sans-serif
     outline: none
     border: none
     text-decoration: none
@@ -31,54 +30,37 @@ html
         background-color: variables.$dark-gray-color
 
 header
-    position: fixed
+    position: fixed 
     top: 0
     left: 0
     right: 0
     z-index: 10000
-    background-color: variables.$white-color
-    width: 100vw
-    height: 18vh
-    text-align: center
-    @include mixins.mobile
-        height: 10vh
-
-    
-    img
-        width: 195px
-        height: 79px
+    .logo
+        text-align: center
+        background-color: variables.$white-color
         @include mixins.mobile
-            width: 143px
-            height: 58px
-    .search-icon
-        position: relative
-        font-size: 15px
-        top: -30px
-        left: 300px
-        @include mixins.mobile
-            font-size: 15px
-            top: -20px
-            left: 70px
-        
-    nav
+            position: relative
+        img
+        .search-icon
+            position: relative
+            left: 250px
+            color: variables.$dark-gray-color
+            font-size: 2rem
+            @include mixins.mobile
+                left: 50px
+    .navbaar
+        position: fixed 
+        top: 1
+        left: 0
+        right: 0
         display: flex
-        align-items: center
         justify-content: center
+        align-items: center
+        flex-direction: column
         background-color: variables.$blue-color
-        height: 48px
         color: variables.$white-color
-        gap: 10rem
-        font-size: 16px
-        @include mixins.mobile
-            display: none
-        a
-            color: variables.$white-color
-            text-decoration: none
-            &:hover
-                color: variables.$dark-gray-color
     .icon 
-        right: 160px
-        bottom: 40px
+        bottom: 60px
         position: relative
         font-size: 2.5rem
         margin-left: 2rem
@@ -86,12 +68,11 @@ header
         color: variables.$dark-gray-color
         &:hover
             color: variables.$blue-color
-    .navbar
+    .options
         @include mixins.mobile
             position: fixed
-            top: 65px
+            top: 75px
             left: -110%
-            z-index: 10000
             width: 35rem
             height: 80vh
             background-color: variables.$blue-color
@@ -103,23 +84,51 @@ header
             &.active
                 left: 0
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 8)
-        a
-            font-size: 20px
-            @include mixins.mobile
-                color: variables.$white-color
-                text-decoration: none
-
-                
-
+        ul
+            border-radius: 10px
+            list-style: none
+            li
+                position: relative  
+                float: left
+                @include mixins.mobile
+                    width: 100%
+                &:hover > ul
+                    display: initial
+                a
+                    border-radius: 10px
+                    font-size: 16px
+                    padding: 20px
+                    color: variables.$white-color
+                    text-decoration: none
+                    display: block
+                    &:hover
+                        background-color: variables.$white-color
+                        color: variables.$blue-color
+                ul
+                    display: none
+                    position: absolute
+                    background-color: variables.$dark-gray-color
+                    padding: 0px
+                    width: 180px
+                    @include mixins.mobile
+                        background-color: variables.$white-color
+                        top: 50px
+                        left: 150px
+                    li
+                        position: relative
+                        a
+                            display: block
+                            color: variables.$white-color
+                            @include mixins.mobile
+                                color: variables.$dark-gray-color
     #menu-btn
         display: none
         @include mixins.mobile
             display: inline-block
-
 .firstmain
-    margin-top: 100px
+    margin-top: 140px
     @include mixins.mobile
-        margin-top: 90px
+        margin-top: 65px
     &-img
         img
             width: 100%
@@ -147,6 +156,8 @@ header
             font-weight: 500
             color: variables.$blue-color
             padding: 50px
+            @include mixins.mobile
+                font-size: 30px
         &-content
             font-size: 20px
             padding-bottom: 20px
@@ -154,10 +165,11 @@ header
             padding-right: 20px
             margin-left: 400px
             margin-right: 400px
+            color: variables.$dark-gray-color
             @include mixins.mobile
                 margin-left: 0
                 margin-right: 0
-            
+                font-size: 14px
     &-icons
         width: 1132px
         height: 259px
@@ -178,40 +190,89 @@ header
     flex-direction: column
     height: 160vh
     @include mixins.mobile
-        height: 190vh
+        height: 140vh
     .title
-        font-size: 20px
-        font-weight: 500
-        color: variables.$blue-color
-        padding: 50px
-        margin-left: 320px
-        margin-right: 320px
-        text-align: center
-        @include mixins.mobile
-            margin-left: 0
-            margin-right: 0
+        h2
+            font-size: 39px
+            font-weight: 500
+            color: variables.$blue-color
+            padding: 50px
+            margin-left: 320px
+            margin-right: 320px
+            text-align: center
+            @include mixins.mobile
+                margin-left: 0
+                margin-right: 0
+                font-size: 24px
     .text
         font-size: 20px
         padding-bottom: 50px
         padding-left: 20px
         padding-right: 20px
-        margin-left: 400px
-        margin-right: 400px
+        margin-left: 300px
+        margin-right: 300px
         text-align: center
+        color: variables.$dark-gray-color
         @include mixins.mobile
             margin-left: 0
             margin-right: 0
+            font-size: 14px
     .products
-        font-size: 20px
-        font-weight: 500
-        color: variables.$blue-color
-        padding: 50px
-        margin-left: 320px
-        margin-right: 320px
-        text-align: center
+        h2
+            font-size: 39px
+            font-weight: 500
+            color: variables.$blue-color
+            margin-bottom: 50px
+            margin-left: 320px
+            margin-right: 320px
+            text-align: center
+            @include mixins.mobile
+                margin-left: 0
+                margin-right: 0  
+                font-size: 20px
+    .cards-mobile
+        display: none
         @include mixins.mobile
-            margin-left: 0
-            margin-right: 0
+            display: inline-block
+            .card
+                width: 250px
+                height: 380px
+                box-shadow: 0px 0px 10px #ccc
+                border-radius: 16px
+                overflow: hidden
+                border: solid 1px #ccc
+                @include mixins.mobile
+                    height: 350px
+                img
+                    width: 100%
+                    height: 230px
+                .card-description 
+                    padding: 20px
+                    text-align: center
+                    p 
+                        font-size: 15px
+                        line-height: 1.5
+                        color: #333
+                        font-weight: bold
+                        @include mixins.mobile
+                            font-size: 10px
+                .card-footer
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 20px
+                    border-top: solid 2px #ccc
+                    h3
+                        font-size: 15px
+                        color: variables.$white-color
+                        font-weight: bold
+                        margin-bottom: 10px
+                .red
+                    background-color: variables.$red-color
+                .blue
+                    background-color: variables.$blue-color
+                .green
+                    background-color: variables.$green-color
     .cards
         margin-top: 20px
         display: flex
@@ -219,6 +280,8 @@ header
         align-items: center
         gap: 30px
         height: 50vh
+        @include mixins.mobile
+            display: none
         .card
             width: 250px
             height: 380px
@@ -226,9 +289,8 @@ header
             border-radius: 16px
             overflow: hidden
             border: solid 1px #ccc
-            // @include mixins.mobile
-            //     width: 600px
-
+            @include mixins.mobile
+                height: 350px
             img
                 width: 100%
                 height: 230px
@@ -242,7 +304,6 @@ header
                     font-weight: bold
                     @include mixins.mobile
                         font-size: 10px
-
             .card-footer
                 display: flex
                 justify-content: center
@@ -267,7 +328,7 @@ header
     flex-direction: column
     height: 160vh
     @include mixins.mobile
-            height: 200vh
+            height: 180vh
     .imagem
         img
             width: 100%
@@ -284,22 +345,21 @@ header
                 height: 100%
                 object-fit: cover
     .title
-        font-size: 20px
-        color: variables.$blue-color
-        font-weight: bold
-        margin: 5rem
-        text-align: center
-    .cards
-        display: flex
-        justify-content: center
-        align-items: center
-        height: 340px
-        gap: 20px
+        h2
+            font-size: 39px
+            font-weight: 500
+            color: variables.$blue-color
+            padding: 50px
+            text-align: center
+            @include mixins.mobile
+                margin-left: 0
+                margin-right: 0
+                font-size: 24px
+    .cards-mobile
+        display: none
         @include mixins.mobile
-            margin-top: 20px
-            display: flex
-            justify-content: center
-            align-items: center
+            display: inline-block
+            margin-bottom: 40px
         .card
             width: 250px
             height: 250px
@@ -311,20 +371,44 @@ header
                 width: 100%
                 height: 150px
             &-title
+                color: variables.$dark-gray-color
+                padding: 20px
+                font-size: 15px
+                text-align: center
+    .cards
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 340px
+        gap: 20px
+        @include mixins.mobile
+            display: none
+        .card
+            width: 250px
+            height: 250px
+            box-shadow: 0px 0px 10px #ccc
+            border-radius: 16px
+            overflow: hidden
+            border: solid 1px #ccc
+            img
+                width: 100%
+                height: 150px
+            &-title
+                color: variables.$dark-gray-color
                 padding: 20px
                 font-size: 15px
                 text-align: center
     .see-more
         background-color: variables.$blue-color
-        padding: 20px
+        padding: 10px
+        padding-left: 50px
+        padding-right: 50px
         border-radius: 16px
-        width: 250px
         text-align: center
-    
         a
             color: variables.$white-color
             font-weight: bold
-            font-size: 20px
+            font-size: 16px
 .footer
     display: flex
     justify-content: center
@@ -332,6 +416,7 @@ header
     height: 20vh
     background-color: variables.$blue-color
     @include mixins.mobile
+        justify-content: start
         flex-direction: column
         text-align: center
         height: 150vh
@@ -348,6 +433,7 @@ header
         bottom: 20px
         @include mixins.mobile
             flex-direction: column
+            margin-top: 20px
         span
             color: variables.$white-color
             margin: 10px
@@ -380,3 +466,7 @@ header
             
 
 
+
+
+
+ 
