@@ -42,11 +42,6 @@ header {
   height: 18vh;
   text-align: center;
 }
-@media (max-width: 425px) {
-  header {
-    height: 10vh;
-  }
-}
 header img {
   width: 195px;
   height: 79px;
@@ -66,7 +61,7 @@ header .search-icon {
 @media (max-width: 425px) {
   header .search-icon {
     font-size: 15px;
-    top: -20px;
+    top: 10px;
     left: 70px;
   }
 }
@@ -82,7 +77,29 @@ header nav {
 }
 @media (max-width: 425px) {
   header nav {
-    display: none;
+    position: fixed;
+    top: 5px;
+    left: -110%;
+    width: 35rem;
+    height: 80vh;
+    background-color: #389CD6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav.active {
+    left: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  }
+}
+header nav p {
+  font-size: 20px;
+}
+@media (max-width: 425px) {
+  header nav p {
+    font-size: 15px;
   }
 }
 header nav a {
@@ -94,7 +111,7 @@ header nav a:hover {
 }
 header .icon {
   right: 160px;
-  bottom: 40px;
+  bottom: 500px;
   position: relative;
   font-size: 2.5rem;
   margin-left: 2rem;
@@ -103,33 +120,6 @@ header .icon {
 }
 header .icon:hover {
   color: #389CD6;
-}
-@media (max-width: 425px) {
-  header .navbar {
-    position: fixed;
-    top: 65px;
-    left: -110%;
-    width: 35rem;
-    height: 80vh;
-    background-color: #389CD6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-  }
-  header .navbar.active {
-    left: 0;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
-  }
-}
-header .navbar p {
-  font-size: 20px;
-}
-@media (max-width: 425px) {
-  header .navbar p {
-    font-size: 15px;
-  }
 }
 header #menu-btn {
   display: none;
@@ -274,6 +264,80 @@ header #menu-btn {
     margin-right: 0;
   }
 }
+.secondmain .cards-mobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile {
+    display: inline-block;
+  }
+  .secondmain .cards-mobile .card {
+    width: 250px;
+    height: 380px;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+    border: solid 1px #ccc;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .secondmain .cards-mobile .card {
+    height: 350px;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card img {
+    width: 100%;
+    height: 230px;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card .card-description {
+    padding: 20px;
+    text-align: center;
+  }
+  .secondmain .cards-mobile .card .card-description p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    font-weight: bold;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .secondmain .cards-mobile .card .card-description p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card .card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: solid 2px #ccc;
+  }
+  .secondmain .cards-mobile .card .card-footer h3 {
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card .red {
+    background-color: #EE6381;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card .blue {
+    background-color: #389CD6;
+  }
+}
+@media (max-width: 425px) {
+  .secondmain .cards-mobile .card .green {
+    background-color: #309D5F;
+  }
+}
 .secondmain .cards {
   margin-top: 20px;
   display: flex;
@@ -281,6 +345,11 @@ header #menu-btn {
   align-items: center;
   gap: 30px;
   height: 50vh;
+}
+@media (max-width: 425px) {
+  .secondmain .cards {
+    display: none;
+  }
 }
 .secondmain .cards .card {
   width: 250px;
@@ -379,6 +448,31 @@ header #menu-btn {
   margin: 5rem;
   text-align: center;
 }
+.thirdmain .cards-mobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  .thirdmain .cards-mobile {
+    display: inline-block;
+  }
+}
+.thirdmain .cards-mobile .card {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 16px;
+  overflow: hidden;
+  border: solid 1px #ccc;
+}
+.thirdmain .cards-mobile .card img {
+  width: 100%;
+  height: 150px;
+}
+.thirdmain .cards-mobile .card-title {
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+}
 .thirdmain .cards {
   display: flex;
   justify-content: center;
@@ -388,10 +482,7 @@ header #menu-btn {
 }
 @media (max-width: 425px) {
   .thirdmain .cards {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 }
 .thirdmain .cards .card {
@@ -417,6 +508,11 @@ header #menu-btn {
   border-radius: 16px;
   width: 250px;
   text-align: center;
+}
+@media (max-width: 425px) {
+  .thirdmain .see-more {
+    margin-top: 20px;
+  }
 }
 .thirdmain .see-more a {
   color: #FFFFFF;

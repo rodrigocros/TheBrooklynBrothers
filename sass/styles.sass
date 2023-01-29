@@ -40,10 +40,7 @@ header
     width: 100vw
     height: 18vh
     text-align: center
-    @include mixins.mobile
-        height: 10vh
-
-    
+   
     img
         width: 195px
         height: 79px
@@ -57,9 +54,8 @@ header
         left: 300px
         @include mixins.mobile
             font-size: 15px
-            top: -20px
+            top: 10px
             left: 70px
-        
     nav
         display: flex
         align-items: center
@@ -70,26 +66,8 @@ header
         gap: 10rem
         font-size: 16px
         @include mixins.mobile
-            display: none
-        a
-            color: variables.$white-color
-            text-decoration: none
-            &:hover
-                color: variables.$dark-gray-color
-    .icon 
-        right: 160px
-        bottom: 40px
-        position: relative
-        font-size: 2.5rem
-        margin-left: 2rem
-        cursor: pointer
-        color: variables.$dark-gray-color
-        &:hover
-            color: variables.$blue-color
-    .navbar
-        @include mixins.mobile
             position: fixed
-            top: 65px
+            top: 5px
             left: -110%
             width: 35rem
             height: 80vh
@@ -99,7 +77,6 @@ header
             align-items: center
             justify-content: center
             align-items: center
-            
             &.active
                 left: 0
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 8)
@@ -107,6 +84,23 @@ header
             font-size: 20px
             @include mixins.mobile
                 font-size: 15px
+        a
+            color: variables.$white-color
+            text-decoration: none
+            &:hover
+                color: variables.$dark-gray-color
+    .icon 
+        right: 160px
+        bottom: 500px
+        position: relative
+        font-size: 2.5rem
+        margin-left: 2rem
+        cursor: pointer
+        color: variables.$dark-gray-color
+        &:hover
+            color: variables.$blue-color
+    // .navbar
+        
             
 
                 
@@ -211,7 +205,50 @@ header
         text-align: center
         @include mixins.mobile
             margin-left: 0
-            margin-right: 0
+            margin-right: 0  
+    .cards-mobile
+        display: none
+        @include mixins.mobile
+            display: inline-block
+            .card
+                width: 250px
+                height: 380px
+                box-shadow: 0px 0px 10px #ccc
+                border-radius: 16px
+                overflow: hidden
+                border: solid 1px #ccc
+                @include mixins.mobile
+                    height: 350px
+                img
+                    width: 100%
+                    height: 230px
+                .card-description 
+                    padding: 20px
+                    text-align: center
+                    p 
+                        font-size: 15px
+                        line-height: 1.5
+                        color: #333
+                        font-weight: bold
+                        @include mixins.mobile
+                            font-size: 10px
+                .card-footer
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 20px
+                    border-top: solid 2px #ccc
+                    h3
+                        font-size: 15px
+                        color: variables.$white-color
+                        font-weight: bold
+                        margin-bottom: 10px
+                .red
+                    background-color: variables.$red-color
+                .blue
+                    background-color: variables.$blue-color
+                .green
+                    background-color: variables.$green-color
     .cards
         margin-top: 20px
         display: flex
@@ -219,6 +256,8 @@ header
         align-items: center
         gap: 30px
         height: 50vh
+        @include mixins.mobile
+            display: none
         .card
             width: 250px
             height: 380px
@@ -228,7 +267,6 @@ header
             border: solid 1px #ccc
             @include mixins.mobile
                 height: 350px
-
             img
                 width: 100%
                 height: 230px
@@ -242,7 +280,6 @@ header
                     font-weight: bold
                     @include mixins.mobile
                         font-size: 10px
-
             .card-footer
                 display: flex
                 justify-content: center
@@ -289,6 +326,24 @@ header
         font-weight: bold
         margin: 5rem
         text-align: center
+    .cards-mobile
+        display: none
+        @include mixins.mobile
+            display: inline-block
+        .card
+            width: 250px
+            height: 250px
+            box-shadow: 0px 0px 10px #ccc
+            border-radius: 16px
+            overflow: hidden
+            border: solid 1px #ccc
+            img
+                width: 100%
+                height: 150px
+            &-title
+                padding: 20px
+                font-size: 15px
+                text-align: center
     .cards
         display: flex
         justify-content: center
@@ -296,10 +351,7 @@ header
         height: 340px
         gap: 20px
         @include mixins.mobile
-            margin-top: 20px
-            display: flex
-            justify-content: center
-            align-items: center
+            display: none
         .card
             width: 250px
             height: 250px
@@ -320,7 +372,8 @@ header
         border-radius: 16px
         width: 250px
         text-align: center
-    
+        @include mixins.mobile
+            margin-top: 20px
         a
             color: variables.$white-color
             font-weight: bold
