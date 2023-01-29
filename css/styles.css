@@ -1,6 +1,6 @@
 @font-face {
   font-family: "trebuc";
-  src: url("./fonts/trebuc") format("truetype");
+  src: url("/fonts/trebuc.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -208,6 +208,11 @@ header #menu-btn {
   color: #389CD6;
   padding: 50px;
 }
+@media (max-width: 425px) {
+  .firstmain-text-title {
+    font-size: 30px;
+  }
+}
 .firstmain-text-content {
   font-size: 20px;
   padding-bottom: 20px;
@@ -215,11 +220,13 @@ header #menu-btn {
   padding-right: 20px;
   margin-left: 400px;
   margin-right: 400px;
+  color: #7B7070;
 }
 @media (max-width: 425px) {
   .firstmain-text-content {
     margin-left: 0;
     margin-right: 0;
+    font-size: 14px;
   }
 }
 .firstmain-icons {
@@ -249,11 +256,11 @@ header #menu-btn {
 }
 @media (max-width: 425px) {
   .secondmain {
-    height: 190vh;
+    height: 140vh;
   }
 }
-.secondmain .title {
-  font-size: 20px;
+.secondmain .title h2 {
+  font-size: 39px;
   font-weight: 500;
   color: #389CD6;
   padding: 50px;
@@ -262,9 +269,10 @@ header #menu-btn {
   text-align: center;
 }
 @media (max-width: 425px) {
-  .secondmain .title {
+  .secondmain .title h2 {
     margin-left: 0;
     margin-right: 0;
+    font-size: 24px;
   }
 }
 .secondmain .text {
@@ -272,29 +280,32 @@ header #menu-btn {
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 300px;
+  margin-right: 300px;
   text-align: center;
+  color: #7B7070;
 }
 @media (max-width: 425px) {
   .secondmain .text {
     margin-left: 0;
     margin-right: 0;
+    font-size: 14px;
   }
 }
-.secondmain .products {
-  font-size: 20px;
+.secondmain .products h2 {
+  font-size: 39px;
   font-weight: 500;
   color: #389CD6;
-  padding: 50px;
+  margin-bottom: 50px;
   margin-left: 320px;
   margin-right: 320px;
   text-align: center;
 }
 @media (max-width: 425px) {
-  .secondmain .products {
+  .secondmain .products h2 {
     margin-left: 0;
     margin-right: 0;
+    font-size: 20px;
   }
 }
 .secondmain .cards-mobile {
@@ -448,7 +459,7 @@ header #menu-btn {
 }
 @media (max-width: 425px) {
   .thirdmain {
-    height: 200vh;
+    height: 180vh;
   }
 }
 .thirdmain .imagem img {
@@ -474,12 +485,19 @@ header #menu-btn {
     object-fit: cover;
   }
 }
-.thirdmain .title {
-  font-size: 20px;
+.thirdmain .title h2 {
+  font-size: 39px;
+  font-weight: 500;
   color: #389CD6;
-  font-weight: bold;
-  margin: 5rem;
+  padding: 50px;
   text-align: center;
+}
+@media (max-width: 425px) {
+  .thirdmain .title h2 {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 24px;
+  }
 }
 .thirdmain .cards-mobile {
   display: none;
@@ -487,6 +505,7 @@ header #menu-btn {
 @media (max-width: 425px) {
   .thirdmain .cards-mobile {
     display: inline-block;
+    margin-bottom: 40px;
   }
 }
 .thirdmain .cards-mobile .card {
@@ -502,6 +521,7 @@ header #menu-btn {
   height: 150px;
 }
 .thirdmain .cards-mobile .card-title {
+  color: #7B7070;
   padding: 20px;
   font-size: 15px;
   text-align: center;
@@ -531,21 +551,23 @@ header #menu-btn {
   height: 150px;
 }
 .thirdmain .cards .card-title {
+  color: #7B7070;
   padding: 20px;
   font-size: 15px;
   text-align: center;
 }
 .thirdmain .see-more {
   background-color: #389CD6;
-  padding: 20px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   border-radius: 16px;
-  width: 250px;
   text-align: center;
 }
 .thirdmain .see-more a {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .footer {
@@ -557,6 +579,7 @@ header #menu-btn {
 }
 @media (max-width: 425px) {
   .footer {
+    justify-content: start;
     flex-direction: column;
     text-align: center;
     height: 150vh;
@@ -581,6 +604,7 @@ header #menu-btn {
 @media (max-width: 425px) {
   .footer .content {
     flex-direction: column;
+    margin-top: 20px;
   }
 }
 .footer .content span {
