@@ -4,6 +4,6 @@ Projeto Front-End usando Javascript, HTML, SASS/Css
 
 Como usar:
 
-Clone este repositório para sua máquina local: git clone https://github.com/[seu-username]/front-end-nodejs-handlebars.git
+Clone este repositório para sua máquina local.
 
 Inicie o servidor
